@@ -17,6 +17,7 @@ html {
   --footer-box: #F3EEEA;
   --main-white: #FAFAFA;
   --second-white: #FFFFFF;
+  --hoover-color: #E9EBEB;
 }
 
 /* general layout */
@@ -169,8 +170,21 @@ div.text-card {
 
 div.date {
   display: flex;
-  align-items: flex-start;
+  justify-content: flex-end;
+  width: 100%;
   font-size: 0.6em;
   padding: 0.3em 0.3em 0 0;
   color: gray;
+}
+/* hoovver effect */
+.main-cards li:hover,
+.main-cards li:focus,
+.main-cards li:root {
+  cursor: pointer;
+  background-color: var(--hoover-color);
+}
+
+/* click effect */
+.clicked {
+  background-color: var(--hoover-color);
 }

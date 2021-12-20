@@ -16,7 +16,7 @@
   <header></header>
 
   <main>
-    <div class="app">
+    <div id="app">
       <div class="box">
         <div class="left-column">
           <!-- active user -->
@@ -50,55 +50,21 @@
           <!-- left cards -->
           <div class="main-cards">
             <ul>
-              <li>
+              <li v-for="(user, index) in contacts">
                 <div class="img-name-card">
-                  <img src="img/avatar_1.jpg" alt="avatar 1">
+                  <img :src="`img/avatar${user.avatar}.jpg`" alt="avatar 1">
                   <div class="text-card">
-                    <p class="title">Michele</p>
+                    <p class="title">{{user.name}}</p>
                     <p class="subtitle">ok...</p>
                   </div>
                 </div>
                 <div class="date">
-                  <span>20/12/2021</span>
-                  <span>10:22:21</span>
+                  <span>20/12/2021 10:22:21</span>
                 </div>
               </li>
             </ul>
           </div>
-          <div class="main-cards">
-            <ul>
-              <li>
-                <div class="img-name-card">
-                  <img src="img/avatar_1.jpg" alt="avatar 1">
-                  <div class="text-card">
-                    <p class="title">Michele</p>
-                    <p class="subtitle">ok...</p>
-                  </div>
-                </div>
-                <div class="date">
-                  <span>20/12/2021</span>
-                  <span>10:22:21</span>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="main-cards">
-            <ul>
-              <li>
-                <div class="img-name-card">
-                  <img src="img/avatar_1.jpg" alt="avatar 1">
-                  <div class="text-card">
-                    <p class="title">Michele</p>
-                    <p class="subtitle">ok...</p>
-                  </div>
-                </div>
-                <div class="date">
-                  <span>20/12/2021</span>
-                  <span>10:22:21</span>
-                </div>
-              </li>
-            </ul>
-          </div>
+          
         </div>
         <div class="right-column"></div>
       </div>
