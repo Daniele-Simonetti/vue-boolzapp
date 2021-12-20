@@ -47,7 +47,6 @@ div.box {
   width: 80%;
   height: 95vh;
   margin: 0 auto;
-  background-color: red;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -64,7 +63,6 @@ div.left-column {
 div.right-column {
   width: 65%;
   height: 100%;
-  background-color: orange;
 }
 
 ul {
@@ -73,9 +71,11 @@ ul {
 
 /* left column header*/
 div.header-left {
+  height: 45px;
   display: flex;
   justify-content: space-between;
   background-color: var(--header-box);
+  border-right: 0.1em solid lightgray;
 }
 
 div.header-left > div {
@@ -151,6 +151,7 @@ div.main-cards {
 
 div.main-cards li {
   display: flex;
+  height: 45px;
 }
 
 div.main-cards img {
@@ -187,4 +188,46 @@ div.date {
 /* click effect */
 .clicked {
   background-color: var(--hoover-color);
+}
+
+/* right column header */
+div.right-column div.header-right {
+  height: 45px;
+  background-color: var(--header-box);
+  padding: 0.43em;
+  display: flex;
+  justify-content: space-between;
+}
+div.img-text-right {
+  width: 100%;
+}
+
+div.img-text-right {
+  display: flex;
+}
+
+div.header-right img {
+  width: 7%;
+  border-radius: 4em;
+  margin-right: 0.9em;
+}
+
+div.header-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+div.header-right div.icons {
+  display: flex;
+}
+
+/* right column main */
+div.right-main {
+  height: calc(100% - 90px);
+  background-image: url(../img/mine.jpg);
+}
+/* right column footer */
+div.right-footer {
+  height: 45px;
+  background-color: var(--footer-box);
 }

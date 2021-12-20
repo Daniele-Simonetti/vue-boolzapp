@@ -2,7 +2,6 @@ const app = new Vue(
   {
     el: '#app',
     data: {
-      classClicked: false,
       contacts: [
         {
           name: "Michele",
@@ -91,9 +90,6 @@ const app = new Vue(
       ]
     },
     methods: {
-      clicked: function () {
-       
-      }
     }
   }
 )
