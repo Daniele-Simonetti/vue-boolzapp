@@ -29,6 +29,16 @@ main {
   height: calc(100vh - 15vh);
 }
 
+p.title {
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+p.subtitle {
+  font-size: 0.7em;
+  color: gray;
+}
+
 /* box app layout */
 div.box {
   width: 80%;
@@ -72,12 +82,52 @@ div.header-left img {
   margin-bottom: 0.5em;
 }
 
-div.user p {
-  font-size: 0.8em;
-  font-weight: bold;
-}
-
 div.icons i {
   margin: 0.5em;
   color: gray;
+}
+
+/* left column notifications */
+div.notifications {
+  background-color: var(--notifications);
+  padding: 0.5em;
+  display: flex;
+}
+div.notifications i {
+  background-color: white;
+  color: var(--notifications);
+  /* font-size: 2em; */
+  border-radius: 50%;
+  padding: 0.5em;
+  margin-right: 0.5em;
+}
+
+div.notifications div.text p.subtitle {
+  text-decoration: underline;
+}
+
+/* left column input */
+div.input {
+  background-color: #FAFAFA;
+  padding: 0.3em 0;
+}
+div.input div.input-box{
+  width: 95%;
+  margin: 0 auto;
+  /* border: 0.5px solid lightgray; */
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  padding: 0.3em 1em;
+}
+
+div.input-box i {
+  color: gray;
+  font-size: 0.8em;
+  margin-right: 1.5em;
+}
+div.input-box input {
+  width: 100%;
+  border: none;
+  font-size: 0.7em;
 }
