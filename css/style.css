@@ -235,31 +235,34 @@ div.right-main {
 }
 
 div.chat {
+  display: flex;
+  flex-direction: column;
   height: 100%;
   padding: 2em 3.5em 0 3.5em;
 }
 
-div.chat p {
-  display: inline-block;
+p.mex {
+  font-size: 0.7em;
+}
+p.date {
+  font-size: 0.5em;
+  text-align: end;
+  color: gray;
+}
+
+div.bot-chat {
+  width: 37%;
+  background-color: white;
+  padding: 0.8em 0.5em 0.5em 0.5em;
   border-radius: 10px;
 }
-div.chat div.bot p {
-  background-color: white;
-}
-div.chat div.user {
-  text-align: end;
-}
 
-div.chat div.user p {
+div.user-chat {
+  width: 37%;
+  margin-left: calc(100% - 37%);
   background-color: var(--userchat);
-}
-
-p.mex {
-  font-size: 0.8em;
-}
-
-p.mex span {
-  font-size: 0.6em;
+  padding: 0.8em 0.5em 0.5em 0.5em;
+  border-radius: 10px;
 }
 /* right column footer */
 div.right-footer {
