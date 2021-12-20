@@ -15,6 +15,8 @@ html {
   --notifications: #8EDAFC;
   --header-box: #EAEAEA;
   --footer-box: #F3EEEA;
+  --main-white: #FAFAFA;
+  --second-white: #FFFFFF;
 }
 
 /* general layout */
@@ -55,13 +57,17 @@ div.box {
 div.left-column {
   width: 35%;
   height: 100%;
-  background-color: yellow;
+  background-color: var(--main-white);
 }
 
 div.right-column {
   width: 65%;
   height: 100%;
   background-color: orange;
+}
+
+ul {
+  list-style: none;
 }
 
 /* left column header*/
@@ -77,14 +83,15 @@ div.header-left > div {
 }
 
 div.header-left img {
-  width: 15%;
+  width: 13%;
   border-radius: 4em;
-  margin-bottom: 0.5em;
+  margin: 0.3em;
 }
 
 div.icons i {
   margin: 0.5em;
   color: gray;
+  cursor: pointer;
 }
 
 /* left column notifications */
@@ -104,18 +111,19 @@ div.notifications i {
 
 div.notifications div.text p.subtitle {
   text-decoration: underline;
+  cursor: pointer;
 }
 
 /* left column input */
 div.input {
-  background-color: #FAFAFA;
+  background-color: var(--main-white);
   padding: 0.3em 0;
 }
 div.input div.input-box{
   width: 95%;
   margin: 0 auto;
   /* border: 0.5px solid lightgray; */
-  background-color: #FFFFFF;
+  background-color: var(--second-white);
   display: flex;
   align-items: center;
   padding: 0.3em 1em;
@@ -125,9 +133,44 @@ div.input-box i {
   color: gray;
   font-size: 0.8em;
   margin-right: 1.5em;
+  cursor: pointer;
 }
 div.input-box input {
   width: 100%;
   border: none;
   font-size: 0.7em;
+  outline: none;
+}
+
+/* left cards */
+div.main-cards {
+  width: 97%;
+  background-color: var(--second-white);
+}
+
+div.main-cards li {
+  display: flex;
+}
+
+div.main-cards img {
+  width: 13%;
+  border-radius: 4em;
+  margin: 0.3em 0.8em;
+}
+
+div.img-name-card{
+  padding-bottom: 0.4em;
+  display: flex;
+}
+
+div.text-card {
+  padding-top: 0.3em;
+}
+
+div.date {
+  display: flex;
+  align-items: flex-start;
+  font-size: 0.6em;
+  padding: 0.3em 0.3em 0 0;
+  color: gray;
 }
