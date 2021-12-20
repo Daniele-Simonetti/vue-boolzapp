@@ -8,6 +8,7 @@ html {
   font-size: 100%;
 }
 
+
 /* colors */
 :root {
   --header-bg: #009688;
@@ -84,7 +85,7 @@ div.header-left > div {
 }
 
 div.header-left img {
-  width: 13%;
+  width: 30px;
   border-radius: 4em;
   margin: 0.3em;
 }
@@ -100,6 +101,7 @@ div.notifications {
   background-color: var(--notifications);
   padding: 0.5em;
   display: flex;
+  height: 50px;
 }
 div.notifications i {
   background-color: white;
@@ -119,6 +121,7 @@ div.notifications div.text p.subtitle {
 div.input {
   background-color: var(--main-white);
   padding: 0.3em 0;
+  height: 30px;
 }
 div.input div.input-box{
   width: 95%;
@@ -145,8 +148,10 @@ div.input-box input {
 
 /* left cards */
 div.main-cards {
-  width: 97%;
+  width: 96%;
+  height: calc(100% - 125px);
   background-color: var(--second-white);
+  overflow-y: auto;
 }
 
 div.main-cards li {
@@ -155,7 +160,7 @@ div.main-cards li {
 }
 
 div.main-cards img {
-  width: 13%;
+  width: 30px;
   border-radius: 4em;
   margin: 0.3em 0.8em;
 }
@@ -207,7 +212,7 @@ div.img-text-right {
 }
 
 div.header-right img {
-  width: 7%;
+  width: 30px;
   border-radius: 4em;
   margin-right: 0.9em;
 }
@@ -225,9 +230,28 @@ div.header-right div.icons {
 div.right-main {
   height: calc(100% - 90px);
   background-image: url(../img/mine.jpg);
+  overflow-y: scroll;
 }
 /* right column footer */
 div.right-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 45px;
   background-color: var(--footer-box);
+}
+
+div.right-footer i {
+  text-align: center;
+  width: 10%;
+  color: gray;
+}
+
+div.right-footer input {
+  width: calc(100% - 20%);
+  height: 33px;
+  border: 0;
+  outline: none;
+  padding-left: 1em;
+  font-size: 0.8em;
 }
