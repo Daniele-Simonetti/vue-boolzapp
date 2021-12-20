@@ -19,6 +19,7 @@ html {
   --main-white: #FAFAFA;
   --second-white: #FFFFFF;
   --hoover-color: #E9EBEB;
+  --userchat: #D5F9BA;
 }
 
 /* general layout */
@@ -232,6 +233,34 @@ div.right-main {
   background-image: url(../img/mine.jpg);
   overflow-y: scroll;
 }
+
+div.chat {
+  height: 100%;
+  padding: 2em 3.5em 0 3.5em;
+}
+
+div.chat p {
+  display: inline-block;
+  border-radius: 10px;
+}
+div.chat div.bot p {
+  background-color: white;
+}
+div.chat div.user {
+  text-align: end;
+}
+
+div.chat div.user p {
+  background-color: var(--userchat);
+}
+
+p.mex {
+  font-size: 0.8em;
+}
+
+p.mex span {
+  font-size: 0.6em;
+}
 /* right column footer */
 div.right-footer {
   display: flex;
@@ -255,3 +284,4 @@ div.right-footer input {
   padding-left: 1em;
   font-size: 0.8em;
 }
+
