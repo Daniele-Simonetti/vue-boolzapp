@@ -256,20 +256,21 @@ p.date {
   color: gray;
 }
 
-div.bot-chat {
-  margin-top: 1em;
-  width: 37%;
-  background-color: white;
+.chatted {
   padding: 0.8em 0.5em 0.5em 0.5em;
   border-radius: 10px;
+  width: 37%;
+  background-color: white;
+  margin-top: 1em;
+}
+div.bot-chat {
+  background-color: white;
 }
 
 div.user-chat {
-  width: 37%;
   align-self: flex-end;
   background-color: var(--userchat);
-  padding: 0.8em 0.5em 0.5em 0.5em;
-  border-radius: 10px;
+
 }
 /* right column footer */
 div.right-footer {
