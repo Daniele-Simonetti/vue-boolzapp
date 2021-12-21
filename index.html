@@ -81,11 +81,12 @@
               <i class="fas fa-ellipsis-v"></i>
             </div>
           </div>
+          <!-- chat section -->
           <div class="right-main">
             <div class="chat">
-              <div class="bot-chat">
-                <p v-for="(message, index) in contacts.messages" class="mex">
-                  {{message.text}}
+              <div v-for="(message, index) in contacts" class="bot-chat">
+                <p class="mex">
+                  {{message.messages.text}}
                 </p>
                 <p class="date"></p>
               </div>
