@@ -257,6 +257,7 @@ p.date {
 }
 
 div.bot-chat {
+  margin-top: 1em;
   width: 37%;
   background-color: white;
   padding: 0.8em 0.5em 0.5em 0.5em;
