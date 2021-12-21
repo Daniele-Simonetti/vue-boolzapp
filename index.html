@@ -50,7 +50,7 @@
           <!-- left cards -->
           <div class="main-cards">
             <ul>
-              <li @click="clicked(index)" v-for="(user, index) in contacts" id="user-card">
+              <li @click="clicked(index)" v-for="(user, index) in contacts" id="user-card" :class="(counter == index) ? 'clicked' : ''">
                 <div class="img-name-card">
                   <img :src="`img/avatar${user.avatar}.jpg`" alt="avatar 1">
                   <div class="text-card">

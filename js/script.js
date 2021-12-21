@@ -109,4 +109,7 @@ const app = new Vue(
 // Visualizzazione dinamica dei messaggi: tramite la direttiva v-for, visualizzare tutti i messaggi relativi al contatto attivo all’interno del pannello della conversazione
 
 
-// Click sul contatto mostra la conversazione del contatto cliccato
+// Click sul contatto mostra la conversazione del contatto cliccato: creo un counter che mi faccia collegare gli elementi del mio array contacts con quelli nel mio html e poi sostituisco il mio counter all'interno delle graffe nel mio html per renderli intercambiali
+
+// associando counter ed index, se questi corrispondono allora aggiungo la mia classe clicked per mantenerli colorati di grigio 
+
