@@ -92,7 +92,7 @@ const app = new Vue(
     },
     methods: {
       clicked: function (index) {
-        // se clicco su un nome sposto la classe clciked su di lui
+        // stabilisco un counter che rendo uguale all'index, in modo da far combaciare il mio user con una variabile counter
         console.log('index', index);
         this.counter = index;
         console.log(this.counter);

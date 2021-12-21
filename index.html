@@ -71,7 +71,7 @@
             <div class="img-text-right">
               <img :src="`img/avatar${contacts[counter].avatar}.jpg`" alt="samuele">
               <div class="header-text">
-                <p class="title">{{contacts[0].name}}</p>
+                <p class="title">{{contacts[counter].name}}</p>
                 <p class="subtitle">Ultimo accesso oggi alle <span>28/03/2020 16:15:22</span></p>
               </div>
             </div>
@@ -85,11 +85,11 @@
           <div class="right-main">
             <div class="chat">
 
-              <div v-for="(message, index) in contacts[0].messages" class="chatted" :class="(contacts[0].messages[index].status == 'received') ? 'user-chat' : 'bot-chat'">
+              <div v-for="(message, index) in contacts[counter].messages" class="chatted" :class="(contacts[counter].messages[index].status == 'received') ? 'user-chat' : 'bot-chat'">
                 <p class="mex">
-                  {{contacts[0].messages[index].text}}
+                  {{contacts[counter].messages[index].text}}
                 </p>
-                <p class="date">{{contacts[0].messages[index].date}}</p>
+                <p class="date">{{contacts[counter].messages[index].date}}</p>
               </div>
             </div>
           </div>
