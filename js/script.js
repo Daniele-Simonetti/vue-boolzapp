@@ -90,8 +90,12 @@ const app = new Vue(
       ]
     },
     methods: {
+      clicked: function () {
+        // se clicco su un nome sposto la classe clciked su di lui
+      }
     },
     created() {
+      
     }
   }
 )
