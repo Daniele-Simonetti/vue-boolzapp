@@ -84,22 +84,22 @@
           <!-- chat section -->
           <div class="right-main">
             <div class="chat">
-              <div v-for="(message, index) in contacts" class="bot-chat">
+
+              <div class="bot-chat">
                 <p class="mex">
-                  {{message.messages.text}}
+                  {{contacts[0].messages[0].text}}
                 </p>
-                <p class="date"></p>
+                <p class="date">{{contacts[0].messages[0].date}}</p>
+              </div>
+              <div class="bot-chat">
+                <p class="mex">{{contacts[0].messages[1].text}}</p>
+                <p class="date">{{contacts[0].messages[1].date}}</p>
               </div>
               <div class="user-chat">
                 <p class="mex">sicuro di non aver sbagliato chat ?
                 </p>
                 <p class="date">28/03/2020 10:10:40</p>
               </div>
-              <div class="bot-chat">
-                <p class="mex">Ah scusa!</p>
-                <p class="date">28/03/2020 10:10:40</p>
-              </div>
-
             </div>
           </div>
           <div class="right-footer">
