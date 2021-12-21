@@ -50,7 +50,7 @@
           <!-- left cards -->
           <div class="main-cards">
             <ul>
-              <li @click="" v-for="(user, index) in contacts" id="user-card">
+              <li @click="clicked(index)" v-for="(user, index) in contacts" id="user-card">
                 <div class="img-name-card">
                   <img :src="`img/avatar${user.avatar}.jpg`" alt="avatar 1">
                   <div class="text-card">
@@ -64,12 +64,12 @@
               </li>
             </ul>
           </div>
-          
         </div>
+        <!-- colonna a destra -->
         <div class="right-column">
           <div class="header-right">
             <div class="img-text-right">
-              <img :src="`img/avatar${contacts[0].avatar}.jpg`" alt="samuele">
+              <img :src="`img/avatar${contacts[counter].avatar}.jpg`" alt="samuele">
               <div class="header-text">
                 <p class="title">{{contacts[0].name}}</p>
                 <p class="subtitle">Ultimo accesso oggi alle <span>28/03/2020 16:15:22</span></p>
@@ -89,18 +89,8 @@
                 <p class="mex">
                   {{contacts[0].messages[index].text}}
                 </p>
-                <p class="date">{{contacts[0].messages[0].date}}</p>
+                <p class="date">{{contacts[0].messages[index].date}}</p>
               </div>
-              <!-- <div class="bot-chat">
-                <p class="mex">{{contacts[0].messages[1].text}}</p>
-                <p class="date">{{contacts[0].messages[1].date}}</p>
-              </div>
-              <div class="user-chat">
-                <p class="mex">{{contacts[0].messages[2].text}}
-                </p>
-                <p class="date">{{contacts[0].messages[2].date}}</p>
-              </div> -->
-
             </div>
           </div>
           <div class="right-footer">
