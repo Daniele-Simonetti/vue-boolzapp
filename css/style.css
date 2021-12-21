@@ -154,10 +154,10 @@ div.input-box input {
 
 /* left cards */
 div.main-cards {
-  width: 96%;
+  width: 100%;
   height: calc(100% - 125px);
   background-color: var(--second-white);
-  overflow-y: auto;
+  overflow-y: scroll;
 }
 
 div.main-cards li {
@@ -250,6 +250,7 @@ p.mex {
   font-size: 0.7em;
 }
 p.date {
+  margin-top: 0.5em;
   font-size: 0.5em;
   text-align: end;
   color: gray;
@@ -264,7 +265,7 @@ div.bot-chat {
 
 div.user-chat {
   width: 37%;
-  margin-left: calc(100% - 37%);
+  align-self: flex-end;
   background-color: var(--userchat);
   padding: 0.8em 0.5em 0.5em 0.5em;
   border-radius: 10px;
@@ -288,7 +289,7 @@ div.right-footer input {
   width: calc(100% - 20%);
   height: 33px;
   border: 0;
-  outline: none;
+  outline-color: lightblue;
   padding-left: 1em;
   font-size: 0.8em;
 }

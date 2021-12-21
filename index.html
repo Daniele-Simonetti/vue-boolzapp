@@ -83,10 +83,10 @@
           </div>
           <div class="right-main">
             <div class="chat">
-              <div class="bot-chat">
-                <p class="mex">La Marianna va in campagna
+              <div v-for="(message, index) in contacts.messages" class="bot-chat">
+                <p class="mex">{{contacts.message.text}}
                 </p>
-                <p class="date">28/03/2020 10:10:40</p>
+                <p class="date">{{contacts.message.date}}</p>
               </div>
               <div class="user-chat">
                 <p class="mex">sicuro di non aver sbagliato chat ?
