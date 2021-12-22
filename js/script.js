@@ -2,7 +2,8 @@ const app = new Vue(
   {
     el: '#app',
     data: {
-      counter: null,
+      // parto dallo 0 così quando apro la pagina parto dal primo elemento del mio array (Michele)
+      counter: 0,
       contacts: [
         {
           name: "Michele",
@@ -100,7 +101,7 @@ const app = new Vue(
     },
     created() {
       // console.log(this.visible);
-      this.counter = 0;
+      // this.counter = 0;
     }
   }
 )
