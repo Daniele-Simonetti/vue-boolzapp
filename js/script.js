@@ -4,6 +4,7 @@ const app = new Vue(
     data: {
       // parto dallo 0 così quando apro la pagina parto dal primo elemento del mio array (Michele)
       counter: 0,
+      newText: '',
       contacts: [
         {
           name: "Michele",
@@ -97,11 +98,23 @@ const app = new Vue(
         console.log('index', index);
         this.counter = index;
         console.log(this.counter);
+      },
+      addMessage: function (index) {
+        if (this.newText.trim().length != 0) {
+          newText = {
+            date: "10/01/2020 15:30:55",
+            text: this.newText,
+            status: "received",
+          }
+          this.contacts[index].messages.push(newText);
+          this.newText = ''; 
+        }  
       }
     },
     created() {
       // console.log(this.visible);
       // this.counter = 0;
+      // console.log(this.contacts[index].messages);
     }
   }
 )
