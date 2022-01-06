@@ -127,13 +127,11 @@ const app = new Vue(
       }
     },
     created() {
+      //   // creo un array in cui puscio tutti i nomi
       // let names = [];
       // for (let index = 0; index < this.contacts.length; index++) {
-      //   // creo un array in cui puscio tutti i nomi
       //   const element = this.contacts[index];
       //   // console.log(element);
-      //   // console.log(element.name);
-      //   // names.push(element.name);
       //   let arrayElement = element.name;
       //   // console.log(arrayElement);
       //   newName = arrayElement.split("")
@@ -151,7 +149,14 @@ const app = new Vue(
 )
 
 // Milestone 4
-// Ricerca utenti: scrivendo qualcosa nell’input a sinistra, vengono visualizzati solo i contatti il cui nome contiene le lettere inserite (es, Marco, Matteo Martina -> Scrivo “mar” rimangono solo Marco e Martina)
+// Ricerca utenti: scrivendo qualcosa nell’input a sinistra, vengono visualizzati solo i contatti il cui nome contiene le lettere inserite (es, Marco, Matteo Martina -> Scrivo “mar” rimangono solo Marco e Martina) ----->>>> milestone non completata
+
+
+// Milestone 5
+// Cancella messaggio: cliccando sul messaggio appare un menu a tendina che permette di cancellare il messaggio selezionato
+
+// Visualizzazione ora e ultimo messaggio inviato/ricevuto nella lista dei contatti 
+
 
 
 
