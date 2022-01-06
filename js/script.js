@@ -95,9 +95,9 @@ const app = new Vue(
     methods: {
       clicked: function (index) {
         // stabilisco un counter che rendo uguale all'index, in modo da far combaciare il mio user con una variabile counter
-        console.log('index', index);
+        // console.log('index', index);
         this.counter = index;
-        console.log(this.counter);
+        // console.log(this.counter);
       },
       addMessage: function (index) {
         if (this.newText.trim().length != 0) {
@@ -127,6 +127,14 @@ const app = new Vue(
       // console.log(this.visible);
       // this.counter = 0;
       // console.log(this.contacts[index].messages);
+      // console.log(this.contacts[0].name);
+      const arraytest = this.contacts[0].name;
+      console.log(arraytest);
+
+      if (arraytest.includes(this.contacts[0].name)) {
+        console.log('ciao');
+      }
+      
     }
   }
 )
