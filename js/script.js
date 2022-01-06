@@ -123,29 +123,27 @@ const app = new Vue(
           this.newMex = ''; 
         }, 1000);
       },
-      searchName: function () {
-        // creo un array in cui puscio tutti i nomi
-        // let names = [];
-        // for (let index = 0; index < this.contacts.length; index++) {
-        //   const element = this.contacts[index];
-        //   // console.log(element);
-        //   // console.log(element.name);
-        //   names.push(element.name);
-        //   let arrayElement = element.name;
-        //   console.log(arrayElement);
-        //   if (names.includes(arrayElement)) {
-        //     console.log('ciao');
-        //   }
-        // }
-        if (this.nameFilter.trim().length != 0) {
-          nameFilter = this.nameFilter
-          this.contacts[index].messages.push(nameFilter);
-          this.nameFilter = ''; 
-        }  
+      searchName: function (index) {
       }
     },
     created() {
       // console.log(names);
+      let names = [];
+      for (let index = 0; index < this.contacts.length; index++) {
+        // creo un array in cui puscio tutti i nomi
+        const element = this.contacts[index];
+        // console.log(element);
+        // console.log(element.name);
+        names.push(element.name);
+        let arrayElement = element.name;
+        // console.log(arrayElement);
+      }
+      console.log(names);
+      if (this.nameFilter.trim().length != 0) {
+        nameFilter = this.nameFilter
+        this.contacts[index].messages.push(nameFilter);
+        this.nameFilter = ''; 
+      }  
     }
   }
 )
