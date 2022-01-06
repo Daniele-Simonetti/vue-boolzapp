@@ -93,7 +93,11 @@
                   {{contacts[counter].messages[index].text}}
                 </p>
                 <p class="date">{{contacts[counter].messages[index].date}}</p>
-                <i class="fas fa-chevron-down"></i>
+                <i class="fas fa-chevron-down" @click="dropdownMenu()"></i>
+                <div id="dropdown_content" >
+                  <a href="">Message Info</a>
+                  <a href="">Delete Message</a>
+                </div>
               </div>
             </div>
           </div>

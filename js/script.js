@@ -124,6 +124,11 @@ const app = new Vue(
         }, 1000);
       },
       searching: function () {
+      },
+      dropdownMenu: function () {
+        let menu = document.getElementById('dropdown_content');
+        menu.classList.add('hide');
+        console.log(menu);
       }
     },
     created() {
