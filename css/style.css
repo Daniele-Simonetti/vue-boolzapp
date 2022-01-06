@@ -258,6 +258,7 @@ p.date {
 }
 
 .chatted {
+  position: relative;
   padding: 0.8em 0.5em 0.5em 0.5em;
   border-radius: 10px;
   width: 37%;
@@ -271,7 +272,14 @@ div.bot-chat {
 div.user-chat {
   align-self: flex-end;
   background-color: var(--userchat);
+}
 
+div.chatted > i {
+  position: absolute;
+  top: 11px;
+  right: 11px;
+  color: gray;
+  cursor: pointer;
 }
 /* right column footer */
 div.right-footer {
