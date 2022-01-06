@@ -98,7 +98,7 @@
           </div>
           <div class="right-footer">
             <i class="far fa-smile"></i>
-            <input @keyup.enter="addMessage( counter)" v-model="newText" type="text" placeholder="Scrivi un messaggio">
+            <input @keyup.enter="addMessage(counter), addTalkBack(counter)" v-model="newText" type="text" placeholder="Scrivi un messaggio">
             <i class="fas fa-microphone"></i>
           </div>
         </div>

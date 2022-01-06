@@ -109,6 +109,18 @@ const app = new Vue(
           this.contacts[index].messages.push(newText);
           this.newText = ''; 
         }  
+      },
+      // inserisco il timer
+      addTalkBack: function (index) {
+        setTimeout(() => {
+          newText = {
+            date: "10/01/2020 15:30:55",
+            text: 'ok.',
+            status: "sent",
+          }
+          this.contacts[index].messages.push(newText);
+          this.newText = ''; 
+        }, 1000);
       }
     },
     created() {
