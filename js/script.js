@@ -4,7 +4,8 @@ const app = new Vue(
     data: {
       // parto dallo 0 così quando apro la pagina parto dal primo elemento del mio array (Michele)
       counter: 0,
-      newText: '',
+      nameFilter: '',
+      newMex: '',
       contacts: [
         {
           name: "Michele",
@@ -100,47 +101,58 @@ const app = new Vue(
         // console.log(this.counter);
       },
       addMessage: function (index) {
-        if (this.newText.trim().length != 0) {
-          newText = {
+        if (this.newMex.trim().length != 0) {
+          newMex = {
             date: "10/01/2020 15:30:55",
-            text: this.newText,
+            text: this.newMex,
             status: "received",
           }
-          this.contacts[index].messages.push(newText);
-          this.newText = ''; 
+          this.contacts[index].messages.push(newMex);
+          this.newMex = ''; 
         }  
       },
       // inserisco il timer
       addTalkBack: function (index) {
         setTimeout(() => {
-          newText = {
+          newMex = {
             date: "10/01/2020 15:30:55",
             text: 'ok.',
             status: "sent",
           }
-          this.contacts[index].messages.push(newText);
-          this.newText = ''; 
+          this.contacts[index].messages.push(newMex);
+          this.newMex = ''; 
         }, 1000);
+      },
+      searchName: function () {
+        // creo un array in cui puscio tutti i nomi
+        // let names = [];
+        // for (let index = 0; index < this.contacts.length; index++) {
+        //   const element = this.contacts[index];
+        //   // console.log(element);
+        //   // console.log(element.name);
+        //   names.push(element.name);
+        //   let arrayElement = element.name;
+        //   console.log(arrayElement);
+        //   if (names.includes(arrayElement)) {
+        //     console.log('ciao');
+        //   }
+        // }
+        if (this.nameFilter.trim().length != 0) {
+          nameFilter = this.nameFilter
+          this.contacts[index].messages.push(nameFilter);
+          this.nameFilter = ''; 
+        }  
       }
     },
     created() {
-      // console.log(this.visible);
-      // this.counter = 0;
-      // console.log(this.contacts[index].messages);
-      // console.log(this.contacts[0].name);
-      const arraytest = this.contacts[0].name;
-      console.log(arraytest);
-
-      if (arraytest.includes(this.contacts[0].name)) {
-        console.log('ciao');
-      }
-      
+      // console.log(names);
     }
   }
 )
 
 // Milestone 4
 // Ricerca utenti: scrivendo qualcosa nell’input a sinistra, vengono visualizzati solo i contatti il cui nome contiene le lettere inserite (es, Marco, Matteo Martina -> Scrivo “mar” rimangono solo Marco e Martina)
+
 
 
 

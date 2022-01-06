@@ -44,7 +44,7 @@
           <div class="input">
             <div class="input-box">
               <i class="fas fa-search"></i>
-              <input v-model="contacts[0].name" type="text" placeholder="Cerca o inizia una nuova chat">
+              <input v-model="nameFilter" type="text" placeholder="Cerca o inizia una nuova chat" @keyup.enter="searchName()">
             </div>
             
           </div>
@@ -98,7 +98,7 @@
           </div>
           <div class="right-footer">
             <i class="far fa-smile"></i>
-            <input @keyup.enter="addMessage(counter), addTalkBack(counter)" v-model="newText" type="text" placeholder="Scrivi un messaggio">
+            <input @keyup.enter="addMessage(counter), addTalkBack(counter)" v-model="newMex" type="text" placeholder="Scrivi un messaggio">
             <i class="fas fa-microphone"></i>
           </div>
         </div>
