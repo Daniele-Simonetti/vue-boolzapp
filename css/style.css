@@ -175,6 +175,7 @@ div.main-cards img {
 div.img-name-card{
   padding-bottom: 0.4em;
   display: flex;
+  width: 100%;
 }
 
 div.text-card {
@@ -184,7 +185,7 @@ div.text-card {
 div.date {
   display: flex;
   justify-content: flex-end;
-  width: 100%;
+  width: 36%;
   font-size: 0.6em;
   padding: 0.3em 0.3em 0 0;
   color: gray;

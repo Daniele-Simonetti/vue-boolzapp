@@ -112,9 +112,11 @@ const app = new Vue(
         // console.log(this.counter);
       },
       addMessage: function (index) {
+        dayjs.extend(window.dayjs_plugin_customParseFormat);
+        let data = dayjs().format("D/M/YYYY HH:mm:ss");
         if (this.newMex.trim().length != 0) {
           newMex = {
-            date: "10/01/2020 15:30:55",
+            date: data,
             text: this.newMex,
             status: "received",
             dropMenu: false
@@ -122,12 +124,10 @@ const app = new Vue(
           this.contacts[index].messages.push(newMex);
           this.newMex = ''; 
         }  
-      },
-      // inserisco il timer
-      addTalkBack: function (index) {
+        // inserisco il timer
         setTimeout(() => {
           newMex = {
-            date: "10/01/2020 15:30:55",
+            date: data,
             text: 'ok.',
             status: "sent",
             dropMenu: false
@@ -151,8 +151,9 @@ const app = new Vue(
         // this.dropMenu = !this.dropMenu;
         // questa funzione la metto direttamente nel click dell'icona per facilitare tutto
       },
-      deleteMessage: function () {
-        
+      deleteMessage: function (index) {
+        this.contacts[this.counter].messages.splice(index, 1);
+        // console.log(this.contacts[this.counter].messages[index]);
       }
     },
     created() {
@@ -177,13 +178,6 @@ const app = new Vue(
   }
 )
 
-
-
-
-// Milestone 5
-// Cancella messaggio: cliccando sul messaggio appare un menu a tendina che permette di cancellare il messaggio selezionato
-
-// Visualizzazione ora e ultimo messaggio inviato/ricevuto nella lista dei contatti 
 
 
 
