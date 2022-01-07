@@ -44,14 +44,14 @@
           <div class="input">
             <div class="input-box" >
               <i class="fas fa-search"></i>
-              <input @input="searching()" type="search" placeholder="Cerca o inizia una nuova chat">
+              <input @keyup="searching()" type="text" placeholder="Cerca o inizia una nuova chat" v-model="nameFilter">
             </div>
             
           </div>
           <!-- left cards -->
           <div class="main-cards">
             <ul>
-              <li @click="clicked(index)" v-for="(user, index) in contacts" id="user-card" :class="(counter == index) ? 'clicked' : ''">
+              <li @click="clicked(index)" v-for="(user, index) in contacts" id="user-card" :class="(counter == index) ? 'clicked' : ''" v-if="user.visible == true">
                 <div class="img-name-card">
                   <img :src="`img/avatar${user.avatar}.jpg`" alt="avatar 1">
                   <div class="text-card">
@@ -93,10 +93,10 @@
                   {{contacts[counter].messages[index].text}}
                 </p>
                 <p class="date">{{contacts[counter].messages[index].date}}</p>
-                <i class="fas fa-chevron-down" @click="dropdownMenu()"></i>
-                <div id="dropdown_content" >
-                  <a href="">Message Info</a>
-                  <a href="">Delete Message</a>
+                <i class="fas fa-chevron-down" @click="message.dropMenu = !message.dropMenu"></i>
+                <div id="dropdown_content" v-show="message.dropMenu">
+                  <p>Message Info</p>
+                  <p @click="">Delete Message</p>
                 </div>
               </div>
             </div>
